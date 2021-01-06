@@ -1,0 +1,177 @@
+body {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+html,
+body {
+  height: 99%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+#content {
+  display: flex;
+  min-height: 99%;
+  margin: 8px;
+}
+#todos {
+  min-height: 100%;
+  min-width: 79%;
+  background-color: hsla(0, 100%, 100%, 0.3);
+  border-radius: 15px;
+}
+#projects {
+  min-height: 100%;
+  min-width: 20%;
+  background-color: hsla(0, 100%, 100%, 0.3);
+  border-radius: 15px;
+  margin-right: 10px;
+}
+h1 {
+  text-align: center;
+}
+.add {
+  position: absolute;
+  bottom: 25px;
+  margin-left: 5px;
+  font-size: 50px;
+  padding: 0 15px 0 15px;
+  background-color: hsla(0, 100%, 100%, 0.5);
+  border: 1px solid grey;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  background-color: hsla(1, 100%, 100%, 0.9);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #fefefe;
+  text-align: center;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.close:hover,
+.close:focus,
+.delete-project:hover,
+.delete-project:focus,
+.add-todo:hover,
+.add-todo:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.addProject {
+  margin-left: 5px;
+  padding: 9px;
+  margin: 15px auto;
+}
+
+.modal-content input {
+  border-radius: 4px;
+  border: 1px solid grey;
+  margin: 4px auto;
+  padding: 3px;
+}
+
+.project-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightslategray;
+  font-size: 20px;
+  padding-left: 15px;
+  background-color: hsla(0, 100%, 100%, 0.2);
+  border-radius: 10px;
+  margin: 4px 6px;
+  cursor: pointer;
+}
+
+.project-item:hover {
+  background-color: hsla(0, 100%, 100%, 0.5);
+}
+
+.delete-project,
+.add-todo {
+  margin-right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  height: 0px;
+}
+
+.add-todo {
+  position: fixed;
+  top: auto;
+  left: 210px;
+}
+
+.todo-item{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: hsla(0, 100%, 100%, 0.2);
+  border-radius: 10px;
+  margin: 4px 6px;
+  padding: 0 23px 0 32px;
+}
+.todo-item input {
+  width: 70px;
+}
+.headings-todo {
+  display: flex;
+  justify-content: space-between;
+  margin: 9px 35px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.headings-todo span,
+.headings-projects span {
+  border-bottom: 3px solid black;
+}
+
+.headings-projects {
+  display: flex;
+  justify-content: space-between;
+  margin: 9px 13px;
+  font-weight: bold;
+  font-size: 20px;
+}
